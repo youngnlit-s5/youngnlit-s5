@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="mailto:sredoevich.ilya@icloud.com"><img src="https://img.shields.io/badge/Email-sredoevich.ilya@icloud.com-1F3864?style=flat-square&logo=maildotru&logoColor=white"></a>
-  <img src="https://img.shields.io/badge/Россия%20%2F%20Сербия-релокация%20%7C%20remote-2E7D32?style=flat-square&logo=googlemaps&logoColor=white">
+  <img src="https://img.shields.io/badge/%20%2F%20Сербия-релокация%20%7C%20remote-2E7D32?style=flat-square&logo=googlemaps&logoColor=white">
   <img src="https://img.shields.io/badge/RU%20%7C%20SR%20%7C%20EN%20B1-informational?style=flat-square&logo=googletranslate&logoColor=white">
 </p>
 
