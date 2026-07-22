@@ -1,4 +1,4 @@
-<h1 align="center">Ilya Sredoevich</h1>
+<h1 align="center">Ilija Sredojevic</h1>
 <p align="center"><b>Infrastructure & Systems Engineer</b> · Linux / Windows · Virtualization · Networking · Automation</p>
 
 <p align="center">
