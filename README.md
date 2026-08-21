@@ -2,73 +2,73 @@
 <p align="center"><b>Infrastructure & Systems Engineer</b> · Linux / Windows · Virtualization · Networking · Automation</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Focus-Infrastructure%20%26%20Automation-1F3864?style=flat-square">
-  <img src="https://img.shields.io/badge/Scale-1000%2B%20users%20%2F%2089%20sites-2E7D32?style=flat-square">
-  <a href="mailto:sredoevich.ilya@icloud.com"><img src="https://img.shields.io/badge/Email-sredoevich.ilya@icloud.com-555?style=flat-square&logo=maildotru&logoColor=white"></a>
+<img src="https://img.shields.io/badge/Focus-Infrastructure%20%26%20Automation-1F3864?style=flat-square">
+<img src="https://img.shields.io/badge/Scale-1000%2B%20users%20%2F%2089%20sites-2E7D32?style=flat-square">
+<a href="mailto:sredoevich.ilya@icloud.com"><img src="https://img.shields.io/badge/Email-sredoevich.ilya@icloud.com-555?style=flat-square&logo=maildotru&logoColor=white"></a>
 </p>
 
 ---
 
-I build and run corporate IT infrastructure — domain services, virtualization, networking and monitoring — across mixed **Linux and Windows** environments, with a strong bias toward **import-independent (Russian) stacks**: Astra Linux, ALD Pro, Alt, zVirt/oVirt, Brest.
+## About these repositories
 
-Most of my work is **3rd-line engineering and rollouts**: standing up domain controllers and repositories, planning and executing migrations, wiring up virtualization and networks, and making the whole thing observable and backed up. My current project spans **1000+ users across 89 branch offices** country-wide. I care about doing changes without downtime, documenting them, and automating anything that gets repeated.
+Everything published here runs on an isolated lab bench, and that is deliberate.
 
-Lately I've been moving that same mindset toward **DevOps** — containers, declarative provisioning, and everything-as-code.
+My production work was delivered for a client under an IT services contract with confidentiality obligations. Client configurations, addressing, naming, topology and data cannot be published — and none of them appear in any commit here.
 
-## What I work with
+What these repositories contain instead is the same architecture rebuilt from zero on test hardware: the same design decisions, the same stack, the same failure modes. Every result is verified with real command output rather than screenshots of installers, so the work can be read and checked rather than taken on trust.
 
-**Directory & migration** — Designing OU/GPO structures, DNS/DHCP, and running **Active Directory → ALD Pro / FreeIPA** migrations (~200 workstations, no critical downtime): domain controller + repository prep, software-install policies, staged cutover, incident handling.
+Not toy projects, and not copies of client systems. Reproductions of work that already ran in production, built in an environment where they can be shown.
 
-**Virtualization** — Building and operating VMs in production on **VMware/ESXi, Proxmox VE, Hyper-V, zVirt/oVirt, Brest and Alt Virtualization** — networking, snapshots, and backup strategy included.
+---
 
-**Networking** — **MikroTik / RouterOS** as the backbone: routing, NAT, VLANs, firewall, bridges, and **WireGuard** for secure remote access; DNS/DHCP and ISP uplinks.
+## Production experience
 
-**Monitoring & services** — **Zabbix** for infrastructure health, scheduled backups, plus **PostgreSQL**, Microsoft Exchange and mail services (install, tuning, diagnostics).
+IT services contractor delivering infrastructure support to a public-sector client — **1000+ users across 89 branch offices**.
 
-**Automation** — **Bash** and **PowerShell** for day-to-day operations; **Ansible** and **Docker Compose** for reproducible lab and service stacks; **Git** for keeping configs versioned.
+- Planned and executed a migration from **Microsoft Active Directory** to a **FreeIPA**-based directory (ALD Pro on Astra Linux SE) for **~200 workstations with no critical downtime**: domain controllers, package repositories, OU and policy design, staged cutover
+- Ran production virtual machines on **VMware ESXi, Proxmox VE, Hyper-V, oVirt/zVirt and KVM**
+- Configured branch networking on **MikroTik RouterOS** — routing, NAT, VLAN segmentation, firewall policy and **WireGuard** tunnels
+- Covered infrastructure health with **Zabbix**, scheduled backups with regular restore testing
+- Escalation point for 1st and 2nd line support; author of the team's runbooks
+- Worked to contract discipline: changes inside agreed maintenance windows, documented before execution, no unplanned downtime on the serviced estate
 
-## Lab & homelab
+---
 
-I keep a homelab where I prototype before touching production. These repos hold the configs and playbooks behind it:
+## Core skills
 
-| Repo | Stack | What it demonstrates |
+**Linux** — Debian, Ubuntu, RHEL-family, Astra Linux SE, Alt Linux · systemd · PAM/SSSD · LDAP · BIND9 · nginx · PostgreSQL · unattended (preseed) deployment · troubleshooting down to logs and syscalls
+
+**Identity & directory** — FreeIPA / Red Hat Identity Management · 389 Directory Server · MIT Kerberos KDC · HBAC and sudo rules · Kerberos SSO · Active Directory, OU and GPO design · AD-to-FreeIPA migration
+
+**Virtualization** — VMware vSphere/ESXi · Proxmox VE · Hyper-V · KVM/QEMU with libvirt · oVirt/zVirt · Brest
+
+**Networking** — MikroTik RouterOS · WireGuard · VLAN segmentation · firewall policy · TCP/IP · DNS/DHCP
+
+**Windows** — Windows Server, AD DS, Group Policy · Windows 10/11 fleet · Microsoft Exchange · PowerShell
+
+**Automation** — Bash · PowerShell · Ansible · Docker and Docker Compose · Git
+
+**Monitoring & backup** — Zabbix · Uptime Kuma · scheduled and offsite backups · restore testing
+
+---
+
+## Repositories
+
+| Repository | What it reproduces | Stack |
 |---|---|---|
-| **docker-lab** | Docker Compose · Nginx · Uptime Kuma | Reverse proxy, private registry, healthchecks and automated backups on a single host |
-| **ansible-lab** | Ansible · YAML | Control node + two Docker hosts provisioned from scratch: roles for Docker, reverse proxy, registry and backup |
-| **mikrotik-lab** | RouterOS · WireGuard | Full home network: routing, NAT, DHCP/DNS, firewall rules and a WireGuard VPN, with a topology diagram |
-
-## Toolbox
-
-![Astra Linux](https://img.shields.io/badge/Astra%20Linux-FF0000?style=flat-square&logo=linux&logoColor=white)
-![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white)
-![Windows Server](https://img.shields.io/badge/Windows%20Server-0078D6?style=flat-square&logo=windows&logoColor=white)
-![ALD Pro / AD](https://img.shields.io/badge/ALD%20Pro%20%2F%20Active%20Directory-1F3864?style=flat-square&logo=microsoft&logoColor=white)
-<br>
-![VMware](https://img.shields.io/badge/VMware%20ESXi-607078?style=flat-square&logo=vmware&logoColor=white)
-![Proxmox](https://img.shields.io/badge/Proxmox%20VE-E57000?style=flat-square&logo=proxmox&logoColor=white)
-![Hyper-V](https://img.shields.io/badge/Hyper--V-0078D6?style=flat-square&logo=windows&logoColor=white)
-![KVM](https://img.shields.io/badge/KVM%20%2F%20QEMU-CC0000?style=flat-square&logo=qemu&logoColor=white)
-![oVirt](https://img.shields.io/badge/zVirt%20%2F%20oVirt%20%2F%20Brest-5A2D82?style=flat-square&logo=redhat&logoColor=white)
-<br>
-![MikroTik](https://img.shields.io/badge/MikroTik-293239?style=flat-square&logo=mikrotik&logoColor=white)
-![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat-square&logo=wireguard&logoColor=white)
-![Zabbix](https://img.shields.io/badge/Zabbix-D40000?style=flat-square&logo=zabbix&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-<br>
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-
-## Currently exploring
-
-CI/CD with GitLab CI · Kubernetes · Terraform — extending the automation habit from single hosts to full pipelines and clusters.
+| **aldpro-enterprise-project** | The directory migration, rebuilt end to end — 389-ds, Kerberos KDC, integrated DNS, HBAC and sudo rules; second phase models the OU tree and permission matrix for a ~200-user / ~150-machine multi-site company | FreeIPA / ALD Pro, Astra Linux SE |
+| **mikrotik-lab** | The branch network topology as code — default-drop firewall, isolated guest VLAN, per-segment DHCP/DNS, WireGuard VPN, hardened management access; imports in one command | RouterOS, WireGuard |
+| **ansible-lab** | The provisioning approach — two Docker hosts built from scratch with four idempotent roles: engine, nginx reverse proxy, private registry, scheduled backups; linted and verified idempotent | Ansible, Docker |
+| **docker-lab** | The service stack — nginx reverse proxy with TLS termination, private registry with basic auth, uptime monitoring, nightly volume backups with retention pruning | Docker Compose, nginx |
 
 ---
 
-<p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=youngnlit-s5&show_icons=true&hide_border=true&title_color=1F3864&icon_color=1F3864" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=youngnlit-s5&layout=compact&hide_border=true&title_color=1F3864" />
-</p>
+## Currently working through
+
+GitLab CI/CD · Kubernetes · Terraform · Prometheus and Grafana
+
+---
+
+## Contact
+
+sredoevich.ilya@icloud.com · Belgrade, Serbia · Serbian, Russian, English (B2)
