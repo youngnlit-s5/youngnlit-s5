@@ -57,9 +57,12 @@ IT services contractor delivering infrastructure support to a public-sector clie
 | Repository | What it reproduces | Stack |
 |---|---|---|
 | **aldpro-enterprise-project** | The directory migration, rebuilt end to end — 389-ds, Kerberos KDC, integrated DNS, HBAC and sudo rules; second phase models the OU tree and permission matrix for a ~200-user / ~150-machine multi-site company | FreeIPA / ALD Pro, Astra Linux SE |
+| **astralinux-custom-image** | The deployment method — a fully unattended installation image (preseed + post-install hooks) rebuilt by a single Bash script using xorriso without root privileges: repository wiring, software installation and host configuration automated | Bash, xorriso, preseed |
 | **mikrotik-lab** | The branch network topology as code — default-drop firewall, isolated guest VLAN, per-segment DHCP/DNS, WireGuard VPN, hardened management access; imports in one command | RouterOS, WireGuard |
 | **ansible-lab** | The provisioning approach — two Docker hosts built from scratch with four idempotent roles: engine, nginx reverse proxy, private registry, scheduled backups; linted and verified idempotent | Ansible, Docker |
 | **docker-lab** | The service stack — nginx reverse proxy with TLS termination, private registry with basic auth, uptime monitoring, nightly volume backups with retention pruning | Docker Compose, nginx |
+
+<sub>**docker-lab-ru** — the same Docker lab with documentation in Russian.</sub>
 
 ---
 
