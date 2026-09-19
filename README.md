@@ -4,7 +4,7 @@
 <p align="center">
 <img src="https://img.shields.io/badge/Focus-Infrastructure%20%26%20Automation-1F3864?style=flat-square">
 <img src="https://img.shields.io/badge/Scale-1000%2B%20users%20%2F%2089%20sites-2E7D32?style=flat-square">
-<a href="mailto:sredoevich.ilya@icloud.com"><img src="https://img.shields.io/badge/Email-sredoevich.ilya@icloud.com-555?style=flat-square&logo=maildotru&logoColor=white"></a>
+<a href="mailto: ilija@youngnlits5.com"><img src="https://img.shields.io/badge/Email- ilija@youngnlits5.com-555?style=flat-square&logo=maildotru&logoColor=white"></a>
 </p>
 
 ---
@@ -74,4 +74,4 @@ GitLab CI/CD · Kubernetes · Terraform · Prometheus and Grafana
 
 ## Contact
 
-sredoevich.ilya@icloud.com · Belgrade, Serbia · Serbian, Russian, English (B2)
+ ilija@youngnlits5.com · Belgrade, Serbia · Serbian, Russian, English (B2)
